@@ -25,9 +25,9 @@ COPY ./packages ./packages
 # TODO: follow up pr to remove dependencies on web
 COPY ./apps/web ./apps/web
 COPY ./apps/api/v2 ./apps/api/v2
-COPY calcom/apps/api/v2 ./apps/api/v2
+#COPY calcom/apps/api/v2 ./apps/api/v2
 COPY ./tests ./tests
-COPY ./.env.example ./.env
+#COPY ./.env.example ./.env
 
 # Install node modules and dependencies, prune unneeded deps, then build
 RUN set -eux; \
