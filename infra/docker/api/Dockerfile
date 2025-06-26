@@ -18,7 +18,8 @@ ENV NODE_ENV="production" \
 FROM base as build
 
 # copy all required files from the monorepo
-COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json git-init.sh git-setup.sh ./
+# COPY git-init.sh ./
+COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json  git-setup.sh ./
 COPY /.yarn ./.yarn
 COPY ./apps/api ./apps/api
 COPY ./packages ./packages
@@ -27,7 +28,7 @@ COPY ./apps/web ./apps/web
 COPY ./apps/api/v2 ./apps/api/v2
 #COPY calcom/apps/api/v2 ./apps/api/v2
 COPY ./tests ./tests
-#COPY ./.env.example ./.env
+COPY ./.env.example ./.env
 
 # Install node modules and dependencies, prune unneeded deps, then build
 RUN set -eux; \
