@@ -18,8 +18,8 @@ ENV NODE_ENV="production" \
 FROM base as build
 
 # copy all required files from the monorepo
-# COPY git-init.sh ./
-COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json  git-setup.sh ./
+# COPY git-init.sh git-setup.sh ./
+COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json  ./
 COPY /.yarn ./.yarn
 COPY ./apps/api ./apps/api
 COPY ./packages ./packages
