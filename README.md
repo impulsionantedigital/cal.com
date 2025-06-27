@@ -1,3 +1,26 @@
+# O que fazer após subir o serviço
+Habilitar uso da API
+
+### Instalar
+apt-get update
+
+apt-get install nano
+
+### Executar
+
+Executar > nano .env.example
+
+Colar conteúdo do .env.example e salvar
+
+Executar > nano .env.appStore.example
+
+Colar conteúdo do .env.appStore.example e salvar
+
+Executar > yarn dev
+
+Executar > yarn workspace @calcom/api dev
+
+
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://github.com/calcom/cal.com">
